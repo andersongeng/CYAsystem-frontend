@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/CYAsystem-frontend/', // GitHub Pages subdirectory
+  base: './', // Use relative paths for better compatibility with HashRouter
 })

@@ -139,9 +139,10 @@ api.interceptors.response.use(
                 localStorage.removeItem('access_token');
 
                 // Only redirect if not already on login page
-                if (!window.location.pathname.includes('/login')) {
+                if (!window.location.hash.includes('/login') && !window.location.pathname.includes('/login')) {
                     console.log('Redirecting to login...');
-                    window.location.href = '/login';
+                    // For HashRouter, redirect to the hash-based login route
+                    window.location.hash = '/login';
                 }
 
                 return Promise.reject(refreshError);

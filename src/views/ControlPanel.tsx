@@ -9,7 +9,7 @@ const ControlPanel = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [selectedSale, setSelectedSale] = useState<SaleDetailResponse | null>(null);
-    const [loadingSaleDetails, setLoadingSaleDetails] = useState(false);
+    const [_loadingSaleDetails, setLoadingSaleDetails] = useState(false);
 
     // Helper to format payment method names
     const formatPaymentMethod = (method: string): string => {

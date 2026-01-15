@@ -11,6 +11,7 @@ import { DashboardLayout } from './components/DashboardLayout'
 
 function App() {
   const location = useLocation();
+  console.log('Current internal path:', location.pathname);
 
   const getLinkStyle = (path: string) => {
     const isActive = location.pathname === path;
@@ -52,6 +53,8 @@ function App() {
         </Route>
 
         <Route path="/" element={<Navigate to="/login" replace />} />
+        {/* Catch-all route to handle any unmatched paths (especially helpful on initial load) */}
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </div>
   )

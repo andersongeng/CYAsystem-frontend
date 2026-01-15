@@ -28,7 +28,7 @@ const Sales = () => {
 
     // Barcode scanner states
     const [isScannerActive, setIsScannerActive] = useState(false);
-    const [lastScannedBarcode, setLastScannedBarcode] = useState('');
+    const [_lastScannedBarcode, setLastScannedBarcode] = useState('');
 
     useEffect(() => {
         fetchProducts();
